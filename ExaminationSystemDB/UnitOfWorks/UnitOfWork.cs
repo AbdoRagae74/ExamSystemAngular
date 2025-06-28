@@ -9,11 +9,14 @@ namespace ExaminationSystemDB.UnitOfWorks
 
         GenericRepo<Student> studentRepo;
         GenericRepo<Answer> answerRepo;
-        GenericRepo<Exam> examRepo;
+        //GenericRepo<Exam> examRepo;
+        ExamRepositroy examRepo;
         GenericRepo<Question> questionRepo;
         GenericRepo<StudentAnswer> studentAnswerRepo;
-        GenericRepo<StudentExam> studentExamRepo;
-        
+        //GenericRepo<StudentExam> studentExamRepo;
+        StudentExamRepository studentExamRepo;
+
+
         public UnitOfWork(ExamContext db) {
             this.db = db;
         }
@@ -33,12 +36,12 @@ namespace ExaminationSystemDB.UnitOfWorks
                 return answerRepo;
             }
         }
-        public GenericRepo<Exam> ExamRepo
+        public ExamRepositroy ExamRepo
         {
             get
             {
                 if (examRepo == null)
-                    examRepo = new GenericRepo<Exam>(db);
+                    examRepo = new ExamRepositroy(db);
                 return examRepo;
             }
         }
@@ -60,12 +63,12 @@ namespace ExaminationSystemDB.UnitOfWorks
                 return studentAnswerRepo;
             }
         }
-        public GenericRepo<StudentExam> StudentExamRepo
+        public StudentExamRepository StudentExamRepo
         {
             get
             {
                 if (studentExamRepo == null)
-                    studentExamRepo = new GenericRepo<StudentExam>(db);
+                    studentExamRepo = new StudentExamRepository(db);
                 return studentExamRepo;
             }
         }

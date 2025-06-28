@@ -1,4 +1,5 @@
 
+using ExaminationSystemDB.MapperConfig;
 using ExaminationSystemDB.Models;
 using ExaminationSystemDB.Repositories;
 using ExaminationSystemDB.UnitOfWorks;
@@ -17,7 +18,7 @@ namespace ExaminationSystemDB
             builder.Services.AddScoped<UnitOfWork>();
             builder.Services.AddDbContext<ExamContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Con")));
-
+            builder.Services.AddAutoMapper(typeof(MapConfig));
             builder.Services.AddOpenApi();
 
             var app = builder.Build();

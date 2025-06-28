@@ -1,54 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\",
+  "WorkspaceRootPath": "E:\\Angular project\\ExaminationSystemDB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|e:\\angular project\\examinationsystemdb\\examinationsystemdb\\dtos\\studentexamdto\\displaystudentexamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\dtos\\studentexamdto\\displaystudentexamdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|e:\\angular project\\examinationsystemdb\\examinationsystemdb\\mapperconfig\\mapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\mapperconfig\\mapconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|e:\\angular project\\examinationsystemdb\\examinationsystemdb\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\examinationsystemdb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\examinationsystemdb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|e:\\angular project\\examinationsystemdb\\examinationsystemdb\\repositories\\studentexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\repositories\\studentexamrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|e:\\angular project\\examinationsystemdb\\examinationsystemdb\\repositories\\examrepositroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\repositories\\examrepositroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\models\\studentanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\models\\studentanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\models\\studentexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|e:\\angular project\\examinationsystemdb\\examinationsystemdb\\models\\studentexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\models\\studentexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\repositories\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\repositories\\genericrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\models\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\models\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|c:\\users\\abdelrahman ragae\\source\\repos\\examinationsystemdb\\examinationsystemdb\\models\\examcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\models\\examcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|e:\\angular project\\examinationsystemdb\\examinationsystemdb\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49C02EB9-A48C-4A85-ACA3-D0BE3F0DE30F}|ExaminationSystemDB\\ExaminationSystemDB.csproj|solutionrelative:examinationsystemdb\\unitofworks\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,162 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "MapConfig.cs",
+              "DocumentMoniker": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\MapperConfig\\MapConfig.cs",
+              "RelativeDocumentMoniker": "ExaminationSystemDB\\MapperConfig\\MapConfig.cs",
+              "ToolTip": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\MapperConfig\\MapConfig.cs",
+              "RelativeToolTip": "ExaminationSystemDB\\MapperConfig\\MapConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T04:32:18.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentExamRepository.cs",
+              "DocumentMoniker": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Repositories\\StudentExamRepository.cs",
+              "RelativeDocumentMoniker": "ExaminationSystemDB\\Repositories\\StudentExamRepository.cs",
+              "ToolTip": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Repositories\\StudentExamRepository.cs",
+              "RelativeToolTip": "ExaminationSystemDB\\Repositories\\StudentExamRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwBEAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T04:31:43.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Controllers\\StudentController.cs",
+              "DocumentMoniker": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "ExaminationSystemDB\\Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Controllers\\StudentController.cs",
+              "ToolTip": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Controllers\\StudentController.cs",
               "RelativeToolTip": "ExaminationSystemDB\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T08:21:40.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExaminationSystemDB",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\ExaminationSystemDB.csproj",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\ExaminationSystemDB.csproj",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\ExaminationSystemDB.csproj",
-              "RelativeToolTip": "ExaminationSystemDB\\ExaminationSystemDB.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-27T08:20:05.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Program.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Program.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Program.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "DisplayStudentExamDTO.cs",
+              "DocumentMoniker": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\DTOs\\StudentExamDTO\\DisplayStudentExamDTO.cs",
+              "RelativeDocumentMoniker": "ExaminationSystemDB\\DTOs\\StudentExamDTO\\DisplayStudentExamDTO.cs",
+              "ToolTip": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\DTOs\\StudentExamDTO\\DisplayStudentExamDTO.cs",
+              "RelativeToolTip": "ExaminationSystemDB\\DTOs\\StudentExamDTO\\DisplayStudentExamDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T08:07:39.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAswEQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T08:07:33.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GenericRepo.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Repositories\\GenericRepo.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Repositories\\GenericRepo.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Repositories\\GenericRepo.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Repositories\\GenericRepo.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T08:04:55.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ExamContext.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\ExamContext.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Models\\ExamContext.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\ExamContext.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Models\\ExamContext.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T02:56:38.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentAnswer.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\StudentAnswer.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Models\\StudentAnswer.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\StudentAnswer.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Models\\StudentAnswer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T02:48:00.753Z",
+              "WhenOpened": "2025-06-28T04:23:35.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "StudentExam.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\StudentExam.cs",
+              "DocumentMoniker": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\StudentExam.cs",
               "RelativeDocumentMoniker": "ExaminationSystemDB\\Models\\StudentExam.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\StudentExam.cs",
+              "ToolTip": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\StudentExam.cs",
               "RelativeToolTip": "ExaminationSystemDB\\Models\\StudentExam.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwA4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T02:47:42.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Answer.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Answer.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Models\\Answer.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Answer.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Models\\Answer.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ExamRepositroy.cs",
+              "DocumentMoniker": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Repositories\\ExamRepositroy.cs",
+              "RelativeDocumentMoniker": "ExaminationSystemDB\\Repositories\\ExamRepositroy.cs",
+              "ToolTip": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\Repositories\\ExamRepositroy.cs",
+              "RelativeToolTip": "ExaminationSystemDB\\Repositories\\ExamRepositroy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T02:47:14.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Question.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Question.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Models\\Question.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Question.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Models\\Question.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T02:44:14.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Exam.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Exam.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Models\\Exam.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Exam.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Models\\Exam.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T02:44:02.829Z",
+              "WhenOpened": "2025-06-28T03:45:20.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "ExaminationSystemDB\\Models\\Student.cs",
-              "ToolTip": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\Models\\Student.cs",
-              "RelativeToolTip": "ExaminationSystemDB\\Models\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
+              "ToolTip": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
+              "RelativeToolTip": "ExaminationSystemDB\\UnitOfWorks\\UnitOfWork.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAmwEEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T02:43:27.364Z",
+              "WhenOpened": "2025-06-27T08:07:33.179Z",
               "EditorCaption": ""
             }
           ]

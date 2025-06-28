@@ -1,20 +1,59 @@
 [
   {
     "ContainingType": "ExaminationSystemDB.Controllers.StudentController",
-    "Method": "add",
-    "RelativePath": "api/Student",
-    "HttpMethod": "POST",
+    "Method": "GetAvailableExams",
+    "RelativePath": "api/Student/{studentId}/available",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "s",
-        "Type": "ExaminationSystemDB.Models.Student",
+        "Name": "studentId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [],
-    "Summary": "Adds new student"
+    "Summary": "Get available exams for specific student"
+  },
+  {
+    "ContainingType": "ExaminationSystemDB.Controllers.StudentController",
+    "Method": "GetSpecificResult",
+    "RelativePath": "api/Student/{studentId}/result",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "examId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "Summary": "Get Results for student taken exams"
+  },
+  {
+    "ContainingType": "ExaminationSystemDB.Controllers.StudentController",
+    "Method": "GetAllExamResults",
+    "RelativePath": "api/Student/{studentId}/results",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Summary": "Get Results for student taken exams"
   },
   {
     "ContainingType": "ExaminationSystemDB.Controllers.WeatherForecastController",

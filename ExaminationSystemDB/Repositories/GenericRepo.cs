@@ -5,7 +5,7 @@ namespace ExaminationSystemDB.Repositories
     public class GenericRepo<T> where T : class
     {
 
-        ExamContext con;
+        public ExamContext con;
         public GenericRepo(ExamContext c)
         {
             con = c;
