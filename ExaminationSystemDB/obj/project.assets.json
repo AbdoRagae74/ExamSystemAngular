@@ -4674,11 +4674,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\ExaminationSystemDB.csproj",
+      "projectUniqueName": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\ExaminationSystemDB.csproj",
       "projectName": "ExaminationSystemDB",
-      "projectPath": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\ExaminationSystemDB.csproj",
+      "projectPath": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\ExaminationSystemDB.csproj",
       "packagesPath": "C:\\Users\\AbdelRahman Ragae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AbdelRahman Ragae\\source\\repos\\ExaminationSystemDB\\ExaminationSystemDB\\obj\\",
+      "outputPath": "E:\\Angular project\\ExaminationSystemDB\\ExaminationSystemDB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
