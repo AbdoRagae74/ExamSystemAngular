@@ -1,4 +1,5 @@
 ﻿using ExaminationSystemDB.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExaminationSystemDB.Repositories
 {
@@ -6,6 +7,15 @@ namespace ExaminationSystemDB.Repositories
     {
         public ExamRepositroy(ExamContext c) : base(c)
         {
+        }
+        public List<Exam> GetExamsInfo()
+        {
+            return con.Exam.Include(e=> e.question).ThenInclude(q=> q.answers).ToList();
+        }
+
+        public Exam getExamByID(int id)
+        {
+            return con.Exam.Include(e => e.question).ThenInclude(q => q.answers).FirstOrDefault(e => e.Id == id);
         }
 
         public List<Exam> getRestExams(List<int> taken)

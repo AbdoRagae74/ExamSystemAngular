@@ -23,33 +23,33 @@ namespace ExaminationSystemDB.Controllers
         [HttpGet]
         public ActionResult GETExams()
         {
-            List<Exam> exams = unitOfWork.ExamRepo.getAll();
-            List<DisplayExamDTO> examDTOs = mapper.Map<List<DisplayExamDTO>>(exams);
+            List<Exam> exams = unitOfWork.ExamRepo.GetExamsInfo();
+            List<AdminExamDTO> examDTOs = mapper.Map<List<AdminExamDTO>>(exams);
             return Ok(examDTOs);
         }
         [HttpGet("{id}")]
         public ActionResult GetExamByID(int id) { 
           
-           DisplayExamDTO examDTO = mapper.Map<DisplayExamDTO>(unitOfWork.ExamRepo.getByID(id));
+           AdminExamDTO examDTO = mapper.Map<AdminExamDTO>(unitOfWork.ExamRepo.getExamByID(id));
              return Ok(examDTO);
         }
 
         [HttpPost]
-        public ActionResult NewExam(DisplayExamDTO Newexam)
+        public ActionResult NewExam(AdminExamDTO Newexam)
         {
             Exam exam = mapper.Map<Exam>(Newexam);
             unitOfWork.ExamRepo.Add(exam);
             unitOfWork.Save();
-            return Ok(exam);
+            return Ok(Newexam);
         }
 
         [HttpPut("{id}")]
-        public ActionResult EditExam(int id , DisplayExamDTO examDTO )
+        public ActionResult EditExam(int id , AdminExamDTO examDTO )
         {
             Exam EditedExam = unitOfWork.ExamRepo.getByID(id); 
             mapper.Map(examDTO, EditedExam);
             unitOfWork.Save();
-            return Ok(EditedExam);
+            return Ok(examDTO);
         }
 
         [HttpDelete("{id}")]
