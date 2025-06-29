@@ -22,6 +22,10 @@ namespace ExaminationSystemDB.Repositories
         {
             return con.Exam.Where(e => !taken.Contains(e.Id)).ToList();
         }
+	public new List<Exam> getAll()
+        {
+            return con.Exam.Include(e => e.question).ToList();
+        }
 
        
     }
