@@ -11,7 +11,7 @@ namespace ExaminationSystemDB.UnitOfWorks
         GenericRepo<Answer> answerRepo;
         //GenericRepo<Exam> examRepo;
         ExamRepositroy examRepo;
-        GenericRepo<Question> questionRepo;
+        QuestionRepository questionRepo;
         GenericRepo<StudentAnswer> studentAnswerRepo;
         //GenericRepo<StudentExam> studentExamRepo;
         StudentExamRepository studentExamRepo;
@@ -45,12 +45,12 @@ namespace ExaminationSystemDB.UnitOfWorks
                 return examRepo;
             }
         }
-        public GenericRepo<Question> QuestionRepo
+        public QuestionRepository QuestionRepo
         {
             get
             {
                 if (questionRepo == null)
-                    questionRepo = new GenericRepo<Question>(db);
+                    questionRepo = new QuestionRepository(db);
                 return questionRepo;
             }
         }

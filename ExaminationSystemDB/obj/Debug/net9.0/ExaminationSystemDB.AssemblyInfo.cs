@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExaminationSystemDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14d0778368b7df424b68bc3db13bf823d27c8361")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+530616f81b5da2f4dcd9c4a0b4777241e78f152e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExaminationSystemDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExaminationSystemDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "Newexam",
-        "Type": "ExaminationSystemDB.DTOs.ExamDTOs.DisplayExamDTO",
+        "Type": "ExaminationSystemDB.DTOs.ExamDTOs.AdminExamDTO",
         "IsRequired": true
       }
     ],
@@ -56,7 +56,7 @@
       },
       {
         "Name": "examDTO",
-        "Type": "ExaminationSystemDB.DTOs.ExamDTOs.DisplayExamDTO",
+        "Type": "ExaminationSystemDB.DTOs.ExamDTOs.AdminExamDTO",
         "IsRequired": true
       }
     ],
@@ -98,7 +98,7 @@
     "Parameters": [
       {
         "Name": "NewQuestion",
-        "Type": "ExaminationSystemDB.DTOs.QuestionDTOs.DisplayQuestionDTO",
+        "Type": "ExaminationSystemDB.DTOs.QuestionDTOs.EditQuestionDTO",
         "IsRequired": true
       }
     ],
@@ -135,7 +135,7 @@
       },
       {
         "Name": "QuestionDTO",
-        "Type": "ExaminationSystemDB.DTOs.QuestionDTOs.DisplayQuestionDTO",
+        "Type": "ExaminationSystemDB.DTOs.QuestionDTOs.AdminQuestionDTO",
         "IsRequired": true
       }
     ],
