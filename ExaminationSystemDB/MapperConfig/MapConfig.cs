@@ -27,7 +27,13 @@ namespace ExaminationSystemDB.MapperConfig
                 dest.TotalQuestions = src.question?.Count ?? 0;
             }).ReverseMap();
             CreateMap<Exam, AdminExamDTO>().ReverseMap();
-            CreateMap<Question,EditQuestionDTO>().ReverseMap();
+            CreateMap<Question, EditQuestionDTO>().AfterMap((src, dest) =>
+            {
+                dest.Qid = src.Id;
+            }).ReverseMap().AfterMap((src, dest) =>
+            {
+                dest.Id = src.Qid;
+            });
             CreateMap<Exam, DisplayExamDTO>().AfterMap((src, dest) =>
             {
                 dest.DurationInMinutes = src.Duration;
@@ -38,7 +44,8 @@ namespace ExaminationSystemDB.MapperConfig
                 dest.ExamName = src.exam.Name;
             }).ReverseMap();
             CreateMap<Answer, AdminAnswerDTO>().ReverseMap();
-            CreateMap<Question,AdminQuestionDTO>().ReverseMap();
+            CreateMap<Question,AddQuestionDTO>().ReverseMap();
+
         }
 
     }

@@ -23,21 +23,24 @@ namespace ExaminationSystemDB.Controllers
 
 
         [HttpGet]
+        [EndpointSummary("Get all questions")]
         public ActionResult GetQuestions()
         {
             List<Question> questions = unit.QuestionRepo.GetQuestionsInfo();
-            List<AdminQuestionDTO> questionDTOs = mapper.Map<List<AdminQuestionDTO>>(questions);
+            List<EditQuestionDTO> questionDTOs = mapper.Map<List<EditQuestionDTO>>(questions);
             return Ok(questionDTOs);
         }
         [HttpGet("{id}")]
+        [EndpointSummary("Get question by id")]
         public ActionResult GetQuestionByID(int id)
         {
-            AdminQuestionDTO questionDTO = mapper.Map<AdminQuestionDTO>(unit.QuestionRepo.GetQuestionByID(id));
+            EditQuestionDTO questionDTO = mapper.Map<EditQuestionDTO>(unit.QuestionRepo.GetQuestionByID(id));
             return Ok(questionDTO);
         }
 
         [HttpPost]
-        public ActionResult NewQuestion(EditQuestionDTO NewQuestion)
+        [EndpointSummary("Add new question")]
+        public ActionResult NewQuestion(AddQuestionDTO NewQuestion)
         {
             Question q = mapper.Map<Question>(NewQuestion);
             unit.QuestionRepo.Add(q);
@@ -46,15 +49,17 @@ namespace ExaminationSystemDB.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult EditQuestion(int id, AdminQuestionDTO QuestionDTO)
+        [EndpointSummary("Edit question")]
+        public ActionResult EditQuestion(int id, EditQuestionDTO QuestionDTO)
         {
             Question EditedQuestion = unit.QuestionRepo.GetQuestionByID(id);
             mapper.Map(QuestionDTO, EditedQuestion);
-            unit.Save();
+            //unit.Save();
             return Ok(QuestionDTO);
         }
 
         [HttpDelete("{id}")]
+        [EndpointSummary("Delete question")]
         public ActionResult DeleteQuestion(int id)
         {
             unit.QuestionRepo.Delete(id);

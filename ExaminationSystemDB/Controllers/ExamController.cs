@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ExaminationSystemDB.DTOs.AdminDTOs;
 using ExaminationSystemDB.DTOs.ExamDTOs;
 using ExaminationSystemDB.Models;
 using ExaminationSystemDB.UnitOfWorks;
@@ -35,19 +36,31 @@ namespace ExaminationSystemDB.Controllers
         }
 
         [HttpPost]
+        [EndpointSummary("Add new Exam")]
         public ActionResult NewExam(AdminExamDTO Newexam)
-        {
+        {   
             Exam exam = mapper.Map<Exam>(Newexam);
+            exam.Grade = 0;
+            foreach(var q in exam.question)
+            {
+                exam.Grade += q.Grade;
+            }
             unitOfWork.ExamRepo.Add(exam);
             unitOfWork.Save();
             return Ok(Newexam);
         }
 
         [HttpPut("{id}")]
+        [EndpointSummary("Edit Exam")]
         public ActionResult EditExam(int id , AdminExamDTO examDTO )
         {
-            Exam EditedExam = unitOfWork.ExamRepo.getByID(id); 
+            Exam EditedExam = unitOfWork.ExamRepo.getExamByID(id);
             mapper.Map(examDTO, EditedExam);
+            EditedExam.Grade = 0;
+            foreach (var q in EditedExam.question)
+            {
+                EditedExam.Grade += q.Grade;
+            }
             unitOfWork.Save();
             return Ok(examDTO);
         }
@@ -60,3 +73,9 @@ namespace ExaminationSystemDB.Controllers
         }
     }
 }
+
+
+
+/*
+ 
+ */

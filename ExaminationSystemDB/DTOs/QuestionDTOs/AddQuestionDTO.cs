@@ -1,10 +1,11 @@
 ﻿using ExaminationSystemDB.DTOs.AnswerDTOs;
-using ExaminationSystemDB.Models;
 
 namespace ExaminationSystemDB.DTOs.QuestionDTOs
 {
-    public class AdminQuestionDTO
+    public class AddQuestionDTO
     {
+
+        //public int ExamId { get; set; }
         public string Type { get; set; }
         public string Body { get; set; }
         public int Grade { get; set; }

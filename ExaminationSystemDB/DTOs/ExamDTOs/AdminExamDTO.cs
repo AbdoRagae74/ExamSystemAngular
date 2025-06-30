@@ -10,7 +10,7 @@ namespace ExaminationSystemDB.DTOs.ExamDTOs
         public int MinGrade { get; set; }
         public int Grade { get; set; }
         public int Duration { get; set; }
-        public virtual List<AdminQuestionDTO> question { get; set; } 
+        public virtual List<AddQuestionDTO> question { get; set; } 
 
     }
 }
