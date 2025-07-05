@@ -3,8 +3,10 @@ using ExaminationSystemDB.DTOs.AdminDTOs;
 using ExaminationSystemDB.DTOs.AnswerDTOs;
 using ExaminationSystemDB.DTOs.ExamDTOs;
 using ExaminationSystemDB.DTOs.QuestionDTOs;
+using ExaminationSystemDB.DTOs.StudentAnswerDTOs;
 using ExaminationSystemDB.DTOs.StudentExamDTO;
 using ExaminationSystemDB.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ExaminationSystemDB.MapperConfig
 {
@@ -36,7 +38,7 @@ namespace ExaminationSystemDB.MapperConfig
             });
             CreateMap<Exam, DisplayExamDTO>().AfterMap((src, dest) =>
             {
-                dest.DurationInMinutes = src.Duration;
+                dest.duration = src.Duration;
             }).ReverseMap();
 
             CreateMap<StudentExam, DisplayStudentExamDTO>().AfterMap((src, dest) =>
@@ -45,6 +47,12 @@ namespace ExaminationSystemDB.MapperConfig
             }).ReverseMap();
             CreateMap<Answer, AdminAnswerDTO>().ReverseMap();
             CreateMap<Question,AddQuestionDTO>().ReverseMap();
+            CreateMap<StudentAnswer, AddStudentAnswerDTO>().ReverseMap();
+            
+            CreateMap<Answer, StudentAnswersDTO>().ReverseMap();
+            CreateMap<Question, getStudentQuestionDTO>().ReverseMap();
+            CreateMap<TakeStudentExamDTO, Exam>().ReverseMap();
+            CreateMap<AddStudentExamDTO, StudentExam>().ReverseMap();
 
         }
 
