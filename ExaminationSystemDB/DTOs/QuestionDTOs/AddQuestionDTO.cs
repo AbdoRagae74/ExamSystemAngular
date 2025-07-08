@@ -5,7 +5,7 @@ namespace ExaminationSystemDB.DTOs.QuestionDTOs
     public class AddQuestionDTO
     {
 
-        //public int ExamId { get; set; }
+        public int ExamId { get; set; }
         public string Type { get; set; }
         public string Body { get; set; }
         public int Grade { get; set; }

@@ -5,7 +5,7 @@ namespace ExaminationSystemDB.DTOs.QuestionDTOs
 {
     public class EditQuestionDTO
     {
-        public int Qid { get; set; }
+        public int Id { get; set; }
         public string Type { get; set; }
         public string Body { get; set; }
         public int Grade { get; set; }

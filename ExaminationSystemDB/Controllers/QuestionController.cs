@@ -54,7 +54,7 @@ namespace ExaminationSystemDB.Controllers
         {
             Question EditedQuestion = unit.QuestionRepo.GetQuestionByID(id);
             mapper.Map(QuestionDTO, EditedQuestion);
-            //unit.Save();
+            unit.Save();
             return Ok(QuestionDTO);
         }
 

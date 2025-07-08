@@ -31,10 +31,10 @@ namespace ExaminationSystemDB.MapperConfig
             CreateMap<Exam, AdminExamDTO>().ReverseMap();
             CreateMap<Question, EditQuestionDTO>().AfterMap((src, dest) =>
             {
-                dest.Qid = src.Id;
+                //dest.Qid = src.Id;
             }).ReverseMap().AfterMap((src, dest) =>
             {
-                dest.Id = src.Qid;
+                //dest.Id = src.Qid;
             });
             CreateMap<Exam, DisplayExamDTO>().AfterMap((src, dest) =>
             {
@@ -53,6 +53,9 @@ namespace ExaminationSystemDB.MapperConfig
             CreateMap<Question, getStudentQuestionDTO>().ReverseMap();
             CreateMap<TakeStudentExamDTO, Exam>().ReverseMap();
             CreateMap<AddStudentExamDTO, StudentExam>().ReverseMap();
+            CreateMap<AddExamDataDTO, Exam>().ReverseMap();
+            CreateMap<Exam, AddQuestionDTO>().ReverseMap();
+            CreateMap<Exam, ExamWithQuestionsDTO>().ReverseMap();
 
         }
 
