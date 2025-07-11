@@ -1,0 +1,29 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (exam of allExams; track exam.id) {
+         <tr>
+      <th scope="row"> {{exam.id}} </th>
+      <td>{{exam.name}}</td>
+      <td>{{exam.grade}}</td>
+      <td>{{exam.duration}}</td>
+      <td>
+        <a
+        [routerLink]="['/examquestions',exam.id]"
+        >
+            Edit Exam
+        </a>
+      </td>
+
+    </tr>
+    }
+    </tbody>
+    </table>

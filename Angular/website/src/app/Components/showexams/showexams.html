@@ -1,0 +1,30 @@
+
+<section class="m-5">
+
+<table class="table" >
+<tr>
+  <th scope="col">ID</th>
+  <th scope="col">Name</th>
+  <th scope="col">Grade</th>
+  <th scope="col">Minimum Grade</th>
+  <th scope="col">Duration in minutes</th>
+  <th scope="col">Take</th>
+</tr>
+  @for(exam of exams; track exam.id){
+    <tr>
+
+      <th scope="row">{{exam.id}}</th>
+      <td>{{exam.name}}</td>
+      <td>{{exam.grade}}</td>
+      <td>{{exam.minGrade}}</td>
+      <td>{{exam.duration}}</td>
+      <td>
+        <a class="btn btn-primary" (click)="gotoExam()"
+        [routerLink]="['/exam',exam.id,1]"
+        >Go to Exam </a>
+      </td>
+    </tr>
+  }
+  
+</table>
+</section>
