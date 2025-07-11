@@ -20,10 +20,20 @@ namespace ExaminationSystemDB
             options.UseSqlServer(builder.Configuration.GetConnectionString("Con")));
             builder.Services.AddAutoMapper(typeof(MapConfig));
             builder.Services.AddOpenApi();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularClient",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:4200")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
 
             var app = builder.Build();
 
-            
+
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
@@ -31,6 +41,7 @@ namespace ExaminationSystemDB
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("AllowAngularClient");
 
             app.UseAuthorization();
 

@@ -22,5 +22,15 @@ namespace ExaminationSystemDB.Repositories
             return con.StudentExam.Include(x=>x.exam).FirstOrDefault(x => x.StudentId == studentId && x.ExamId == examId);
         
         }
+
+	public List<StudentExam> getStudentsResultsForExam(int examId)
+        {
+            return con.StudentExam
+                .Where(se => se.ExamId == examId)
+                .Include(se => se.student)
+                .Include(se => se.exam)
+                .OrderByDescending(se => se.StudentGrade)
+                .ToList();
+        }
     }
 }
