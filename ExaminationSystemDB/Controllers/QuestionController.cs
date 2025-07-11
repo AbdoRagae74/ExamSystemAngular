@@ -42,6 +42,9 @@ namespace ExaminationSystemDB.Controllers
         [EndpointSummary("Add new question")]
         public ActionResult NewQuestion(AddQuestionDTO NewQuestion)
         {
+            Exam editedEx = unit.ExamRepo.getByID(NewQuestion.ExamId);
+            editedEx.Grade += NewQuestion.Grade;
+            editedEx.MinGrade = (int) Math.Ceiling(editedEx.Grade / 2.0); 
             Question q = mapper.Map<Question>(NewQuestion);
             unit.QuestionRepo.Add(q);
             unit.Save();
@@ -62,6 +65,11 @@ namespace ExaminationSystemDB.Controllers
         [EndpointSummary("Delete question")]
         public ActionResult DeleteQuestion(int id)
         {
+            Question q = unit.QuestionRepo.GetQuestionByID(id);
+            int examId= q.ExamId;
+            Exam editedEx = unit.ExamRepo.getByID(examId);
+            editedEx.Grade -= q.Grade;
+            editedEx.MinGrade = (int)Math.Ceiling(editedEx.Grade / 2.0);
             unit.QuestionRepo.Delete(id);
             unit.Save();
             return Ok();
