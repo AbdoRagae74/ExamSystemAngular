@@ -1,17 +1,14 @@
 ﻿using ExaminationSystemDB.DTOs.QuestionDTOs;
-using ExaminationSystemDB.Models;
-using System.ComponentModel.DataAnnotations;
 
-namespace ExaminationSystemDB.DTOs.ExamDTOs
+namespace ExaminationSystemDB.DTOs.StudentExamDTO
 {
-    public class AdminExamDTO
+    public class TakeStudentExamDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public int MinGrade { get; set; }
         public int Grade { get; set; }
         public int Duration { get; set; }
-        public virtual List<AddQuestionDTO> question { get; set; } 
-
+        public virtual List<getStudentQuestionDTO> question { get; set; }
     }
 }

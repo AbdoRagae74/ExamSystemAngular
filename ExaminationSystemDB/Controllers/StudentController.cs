@@ -56,5 +56,25 @@ namespace ExaminationSystemDB.Controllers
             DisplayStudentExamDTO exam = map.Map<DisplayStudentExamDTO>(examRes);
             return Ok(exam);
         }
+
+        
+        [HttpGet("{id}/Exam")]
+        public IActionResult getExam(int id)
+        {
+
+            TakeStudentExamDTO examDTO = map.Map<TakeStudentExamDTO>(unit.ExamRepo.getExamByID(id));
+            return Ok(examDTO);
+        }
+
+        [HttpGet("student/{studentId}/Exam/{id}")]
+        [EndpointSummary("Student Takes an exam")]
+        public IActionResult TakeExam(int studentId ,int id)
+        {
+            List<int> takenExamsForStudent = unit.StudentExamRepo.getStudentExamsIds(studentId);
+            if (takenExamsForStudent.Contains(id))
+                return BadRequest("Exam Taken before");
+            TakeStudentExamDTO examDTO = map.Map<TakeStudentExamDTO>(unit.ExamRepo.getExamByID(id));
+            return Ok(examDTO);
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace ExaminationSystemDB
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            
+            string corsText = "";
             builder.Services.AddControllers();
             builder.Services.AddScoped<UnitOfWork>();
             builder.Services.AddDbContext<ExamContext>(options =>
@@ -22,13 +22,13 @@ namespace ExaminationSystemDB
             builder.Services.AddOpenApi();
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAngularClient",
-                    policy =>
-                    {
-                        policy.WithOrigins("http://localhost:4200")
-                              .AllowAnyHeader()
-                              .AllowAnyMethod();
-                    });
+
+                options.AddPolicy(corsText, builder =>
+                {
+                    builder.AllowAnyOrigin();
+                    builder.AllowAnyMethod();
+                    builder.AllowAnyHeader();
+                });
             });
 
             var app = builder.Build();
@@ -45,6 +45,7 @@ namespace ExaminationSystemDB
 
             app.UseAuthorization();
 
+            app.UseCors(corsText);
 
             app.MapControllers();
 

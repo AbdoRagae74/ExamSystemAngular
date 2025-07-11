@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ExaminationSystemDB.DTOs.AdminDTOs;
 using ExaminationSystemDB.DTOs.ExamDTOs;
 using ExaminationSystemDB.Models;
 using ExaminationSystemDB.UnitOfWorks;
@@ -28,26 +29,55 @@ namespace ExaminationSystemDB.Controllers
             return Ok(examDTOs);
         }
         [HttpGet("{id}")]
-        public ActionResult GetExamByID(int id) { 
-          
-           AdminExamDTO examDTO = mapper.Map<AdminExamDTO>(unitOfWork.ExamRepo.getExamByID(id));
+        public ActionResult GetExamByID(int id) {
+
+            ExamWithQuestionsDTO examDTO = mapper.Map<ExamWithQuestionsDTO>(unitOfWork.ExamRepo.getExamByID(id));
              return Ok(examDTO);
         }
 
         [HttpPost]
-        public ActionResult NewExam(AdminExamDTO Newexam)
-        {
+        [EndpointSummary("Add new Exam")]
+        public ActionResult NewExam(AddExamDataDTO Newexam)
+        {   
             Exam exam = mapper.Map<Exam>(Newexam);
+            exam.Grade = 0;
+            foreach(var q in exam.question)
+            {
+                exam.Grade += q.Grade;
+            }
             unitOfWork.ExamRepo.Add(exam);
             unitOfWork.Save();
             return Ok(Newexam);
         }
 
         [HttpPut("{id}")]
+        [EndpointSummary("Edit Exam")]
         public ActionResult EditExam(int id , AdminExamDTO examDTO )
         {
-            Exam EditedExam = unitOfWork.ExamRepo.getByID(id); 
+            Exam EditedExam = unitOfWork.ExamRepo.getExamByID(id);
             mapper.Map(examDTO, EditedExam);
+            EditedExam.Grade = 0;
+            foreach (var q in EditedExam.question)
+            {
+                EditedExam.Grade += q.Grade;
+            }
+            unitOfWork.Save();
+            return Ok(examDTO);
+        }
+        [HttpPut("AddQuestions/{id}")]
+        public ActionResult AddExamQuestions(int id, AdminExamDTO examDTO)
+        {
+            Exam EditedExam = unitOfWork.ExamRepo.getExamByID(id);
+            var oldQs = EditedExam.question.ToList();
+            mapper.Map(examDTO.question, EditedExam.question);
+            EditedExam.Grade = 0;
+            EditedExam.Duration = examDTO.Duration;
+            foreach (var q in oldQs) EditedExam.question.Add(q);
+
+            foreach (var q in EditedExam.question)
+            {
+                EditedExam.Grade += q.Grade;
+            }
             unitOfWork.Save();
             return Ok(examDTO);
         }
@@ -60,3 +90,9 @@ namespace ExaminationSystemDB.Controllers
         }
     }
 }
+
+
+
+/*
+ 
+ */
