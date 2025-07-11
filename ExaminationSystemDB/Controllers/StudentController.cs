@@ -3,6 +3,7 @@ using ExaminationSystemDB.DTOs.ExamDTOs;
 using ExaminationSystemDB.DTOs.StudentExamDTO;
 using ExaminationSystemDB.Models;
 using ExaminationSystemDB.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -11,6 +12,7 @@ namespace ExaminationSystemDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Student")]
     public class StudentController : ControllerBase
     {
         UnitOfWork unit;

@@ -1,9 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ExamSystemApi.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System.Xml;
 
 namespace ExaminationSystemDB.Models
 {
-    public class ExamContext :DbContext
+    public class ExamContext : IdentityDbContext<ApplicationUser>
     {
         public ExamContext()
         {
@@ -21,6 +24,10 @@ namespace ExaminationSystemDB.Models
                 .Property(e => e.StartTime)
                 .HasDefaultValueSql("GETDATE()");
 
+            modelBuilder.Entity<IdentityRole>().HasData(
+               new IdentityRole { Id = "1", Name = "Admin", NormalizedName = "ADMIN" },
+               new IdentityRole { Id = "2", Name = "Student", NormalizedName = "STUDENT" }
+           );
 
             // Seed Students
             modelBuilder.Entity<Student>().HasData(

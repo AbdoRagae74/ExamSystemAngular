@@ -2,6 +2,7 @@
 using ExaminationSystemDB.DTOs.StudentExamDTO;
 using ExaminationSystemDB.Models;
 using ExaminationSystemDB.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace ExaminationSystemDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Student")]
     public class StudentExamController : ControllerBase
     {
         IMapper mapper;
