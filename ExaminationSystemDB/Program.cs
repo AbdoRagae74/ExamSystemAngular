@@ -22,6 +22,7 @@ namespace ExaminationSystemDB
             builder.Services.AddOpenApi();
             builder.Services.AddCors(options =>
             {
+
                 options.AddPolicy(corsText, builder =>
                 {
                     builder.AllowAnyOrigin();
@@ -32,7 +33,7 @@ namespace ExaminationSystemDB
 
             var app = builder.Build();
 
-            
+
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
@@ -40,6 +41,7 @@ namespace ExaminationSystemDB
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("AllowAngularClient");
 
             app.UseAuthorization();
 
