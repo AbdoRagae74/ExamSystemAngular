@@ -48,7 +48,7 @@ namespace ExaminationSystemDB.MapperConfig
             CreateMap<Answer, AdminAnswerDTO>().ReverseMap();
 
             CreateMap<Student, AdminDisplayStudentInfo>().ReverseMap();
-            CreateMap<Question,AdminQuestionDTO>().ReverseMap();
+            //CreateMap<Question,AdminQuestionDTO>().ReverseMap();
             CreateMap<Question,AddQuestionDTO>().ReverseMap();
             CreateMap<StudentAnswer, AddStudentAnswerDTO>().ReverseMap();
             CreateMap<Answer, StudentAnswersDTO>().ReverseMap();
