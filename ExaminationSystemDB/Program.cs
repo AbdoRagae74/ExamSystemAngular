@@ -120,6 +120,7 @@ namespace ExaminationSystemDB
             // Add CORS
             builder.Services.AddCors(options =>
             {
+
                 options.AddPolicy(corsText, builder =>
                 {
                     builder.AllowAnyOrigin();
