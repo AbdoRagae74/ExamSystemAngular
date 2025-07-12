@@ -13,7 +13,9 @@ namespace ExaminationSystemDB
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            string corsText = "";
+            //string corsText = "";
+            string corsText = "AllowAngularClient";
+
             builder.Services.AddControllers();
             builder.Services.AddScoped<UnitOfWork>();
             builder.Services.AddDbContext<ExamContext>(options =>
@@ -25,6 +27,7 @@ namespace ExaminationSystemDB
 
                 options.AddPolicy(corsText, builder =>
                 {
+
                     builder.AllowAnyOrigin();
                     builder.AllowAnyMethod();
                     builder.AllowAnyHeader();
@@ -41,11 +44,10 @@ namespace ExaminationSystemDB
             }
 
             app.UseHttpsRedirection();
-            app.UseCors("AllowAngularClient");
+            app.UseCors(corsText);
 
             app.UseAuthorization();
 
-            app.UseCors(corsText);
 
             app.MapControllers();
 

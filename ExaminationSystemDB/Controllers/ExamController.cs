@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ExaminationSystemDB.DTOs.AdminDTOs;
+using ExaminationSystemDB.DTOs.AnswerDTOs;
 using ExaminationSystemDB.DTOs.ExamDTOs;
 using ExaminationSystemDB.Models;
 using ExaminationSystemDB.UnitOfWorks;
@@ -88,6 +89,25 @@ namespace ExaminationSystemDB.Controllers
             unitOfWork.Save();
             return Ok();
         }
+
+        [HttpGet("{Examid}/{studentID}")]
+        [EndpointSummary("Student Exam Answers")]
+        public ActionResult GetExamAnswerForStudent(int Examid, int studentID)
+        {
+
+            List<Question> questions = unitOfWork.QuestionRepo.GetAllExamQuestions(Examid);
+
+            List<ExamStudentAnswer> questionsDTO = mapper.Map<List<ExamStudentAnswer>>(questions);
+            foreach (var question in questionsDTO)
+            {
+                question.Answers = mapper.Map<List<AnswerDTO>>(unitOfWork.AnswerRepo.GetAllAnswers(question.QuestionId));
+                question.CorrectAnswerId = unitOfWork.AnswerRepo.GetCorrectAnswer(question.QuestionId).ID;
+                question.StudentAnswerId = unitOfWork.StudentAnswerRepo.GetAnswerForQusetion(question.QuestionId, studentID)?.AnswerId ;
+            }
+            return Ok(questionsDTO);
+        }
+
+
     }
 }
 

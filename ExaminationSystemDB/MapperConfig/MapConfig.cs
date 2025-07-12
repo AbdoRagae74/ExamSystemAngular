@@ -8,11 +8,12 @@ using ExaminationSystemDB.DTOs.StudentAnswerDTOs;
 using ExaminationSystemDB.DTOs.StudentExamDTO;
 using ExaminationSystemDB.Models;
 using Microsoft.AspNetCore.Mvc;
+using ExaminationSystemDB.UnitOfWorks;
 namespace ExaminationSystemDB.MapperConfig
 {
     public class MapConfig:Profile
     {
-        public MapConfig() {
+        public MapConfig(){
 	CreateMap<StudentExam, DisplayStudentGradesDTO>().AfterMap((src, dest) =>
             {
                 dest.StudentName = src.student.Name;
@@ -46,6 +47,10 @@ namespace ExaminationSystemDB.MapperConfig
                 dest.ExamName = src.exam.Name;
             }).ReverseMap();
             CreateMap<Answer, AdminAnswerDTO>().ReverseMap();
+            CreateMap<Answer, AnswerDTO>().AfterMap((src, des) => { 
+                des.AnswerText = src.AnswerText;
+                des.AnswerId = src.ID;
+            }).ReverseMap();
 
             CreateMap<Student, AdminDisplayStudentInfo>().ReverseMap();
             //CreateMap<Question,AdminQuestionDTO>().ReverseMap();
@@ -58,7 +63,12 @@ namespace ExaminationSystemDB.MapperConfig
             CreateMap<AddExamDataDTO, Exam>().ReverseMap();
             CreateMap<Exam, AddQuestionDTO>().ReverseMap();
             CreateMap<Exam, ExamWithQuestionsDTO>().ReverseMap();
-
+            CreateMap<Question,ExamStudentAnswer>().AfterMap((src,des) =>
+            {
+                des.QuestionId = src.Id;
+                des.QuestionText = src.Body;
+                des.Grade = src.Grade;
+            });
 
         }
 

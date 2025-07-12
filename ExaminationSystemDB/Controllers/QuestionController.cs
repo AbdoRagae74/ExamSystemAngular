@@ -30,6 +30,10 @@ namespace ExaminationSystemDB.Controllers
             List<EditQuestionDTO> questionDTOs = mapper.Map<List<EditQuestionDTO>>(questions);
             return Ok(questionDTOs);
         }
+
+
+
+
         [HttpGet("{id}")]
         [EndpointSummary("Get question by id")]
         public ActionResult GetQuestionByID(int id)
