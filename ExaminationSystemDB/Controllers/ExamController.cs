@@ -3,6 +3,7 @@ using ExaminationSystemDB.DTOs.AdminDTOs;
 using ExaminationSystemDB.DTOs.ExamDTOs;
 using ExaminationSystemDB.Models;
 using ExaminationSystemDB.UnitOfWorks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,7 @@ namespace ExaminationSystemDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ExamController : ControllerBase
     {
         IMapper mapper;
@@ -22,6 +24,7 @@ namespace ExaminationSystemDB.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult GETExams()
         {
             List<Exam> exams = unitOfWork.ExamRepo.GetExamsInfo();
@@ -29,6 +32,7 @@ namespace ExaminationSystemDB.Controllers
             return Ok(examDTOs);
         }
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
         public ActionResult GetExamByID(int id) {
 
             ExamWithQuestionsDTO examDTO = mapper.Map<ExamWithQuestionsDTO>(unitOfWork.ExamRepo.getExamByID(id));
@@ -37,6 +41,7 @@ namespace ExaminationSystemDB.Controllers
 
         [HttpPost]
         [EndpointSummary("Add new Exam")]
+        [Authorize(Roles = "Admin")]
         public ActionResult NewExam(AddExamDataDTO Newexam)
         {   
             Exam exam = mapper.Map<Exam>(Newexam);
@@ -52,6 +57,7 @@ namespace ExaminationSystemDB.Controllers
 
         [HttpPut("{id}")]
         [EndpointSummary("Edit Exam")]
+        [Authorize(Roles = "Admin")]
         public ActionResult EditExam(int id , AdminExamDTO examDTO )
         {
             Exam EditedExam = unitOfWork.ExamRepo.getExamByID(id);
@@ -65,6 +71,7 @@ namespace ExaminationSystemDB.Controllers
             return Ok(examDTO);
         }
         [HttpPut("AddQuestions/{id}")]
+        [Authorize(Roles = "Admin")]
         public ActionResult AddExamQuestions(int id, AdminExamDTO examDTO)
         {
             Exam EditedExam = unitOfWork.ExamRepo.getExamByID(id);
@@ -83,6 +90,7 @@ namespace ExaminationSystemDB.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteExam(int id) {
             unitOfWork.ExamRepo.Delete(id);
             unitOfWork.Save();
