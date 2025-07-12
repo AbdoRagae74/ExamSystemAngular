@@ -12,10 +12,15 @@ namespace ExaminationSystemDB.Repositories
         public List<Question> GetQuestionsInfo()
         {
             return con.Question.Include(q => q.answers).ToList();
-        }   
-    
-    
-        public  Question GetQuestionByID (int id)
+        }
+
+
+        public List<Question> GetAllExamQuestions(int id)
+        {
+            return con.Question.Include(q => q.answers).Where(q => q.ExamId == id).ToList();
+        }
+
+        public Question GetQuestionByID (int id)
         {
             return con.Question.Include(q => q.answers).FirstOrDefault(q => q.Id == id);
         }
