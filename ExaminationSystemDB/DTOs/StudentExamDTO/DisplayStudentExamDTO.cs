@@ -6,6 +6,7 @@ namespace ExaminationSystemDB.DTOs.StudentExamDTO
 {
     public class DisplayStudentExamDTO
     {
+        public int ExamID { get; set; }
         public string ExamName { get; set; }
         public int StudentGrade { get; set; }
         public DateTime StartTime { get; set; }
