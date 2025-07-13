@@ -8,7 +8,7 @@ namespace ExamSystemApi.Services
 {
     public interface IJwtService
     {
-        string GenerateToken(ApplicationUser user, string role);
+        string GenerateToken(ApplicationUser user, string role, int? studentId = null);
         ClaimsPrincipal ValidateToken(string token);
     }
 
@@ -21,22 +21,31 @@ namespace ExamSystemApi.Services
             _configuration = configuration;
         }
 
-        public string GenerateToken(ApplicationUser user, string role)
+        public string GenerateToken(ApplicationUser user, string role, int? studentId = null)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
 
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, role),
+                new Claim("FirstName", user.FirstName),
+                new Claim("LastName", user.LastName),
+                new Claim("UserId", user.Id)
+            };
+
+            // Add StudentId claim for student users
+            if (studentId.HasValue)
+            {
+                claims.Add(new Claim("StudentId", studentId.Value.ToString()));
+            }
+
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[]
-                {
-                    new Claim(ClaimTypes.NameIdentifier, user.Id),
-                    new Claim(ClaimTypes.Name, user.UserName),
-                    new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Role, role),
-                    new Claim("FirstName", user.FirstName),
-                    new Claim("LastName", user.LastName)
-                }),
+                Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddHours(24),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                 Issuer = _configuration["Jwt:Issuer"],

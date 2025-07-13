@@ -5,6 +5,7 @@ using ExaminationSystemDB.UnitOfWorks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ExaminationSystemDB.Authorization;
 
 namespace ExaminationSystemDB.Controllers
 {
@@ -21,10 +22,18 @@ namespace ExaminationSystemDB.Controllers
             this.mapper = mapper;
             this.unitOfWork = unitOfWork;
         }
-        [HttpPost]
-        [EndpointSummary("Saves student data into db")]
-        public IActionResult AddStudentExamData(AddStudentExamDTO res)
+
+        [HttpPost("{studentId}")]
+        [StudentOwnership]
+        [EndpointSummary("Saves student exam data into db")]
+        public IActionResult AddStudentExamData(int studentId, AddStudentExamDTO res)
         {
+            // Validate that the exam result belongs to this student
+            if (res.StudentId != studentId)
+            {
+                return BadRequest("Exam result must belong to the authenticated student");
+            }
+
             StudentExam SE = mapper.Map<StudentExam>(res);
             unitOfWork.StudentExamRepo.Add(SE);
             unitOfWork.Save();

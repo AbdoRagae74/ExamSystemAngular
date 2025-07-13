@@ -27,6 +27,6 @@ namespace ExaminationSystemDB.Repositories
             return con.Exam.Include(e => e.question).ToList();
         }
 
-       
+
     }
 }

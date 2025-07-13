@@ -30,6 +30,8 @@ namespace ExaminationSystemDB
             builder.Services.AddDbContext<ExamContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("Con")));
 
+            builder.Services.AddScoped<ExamContext>();
+
             // Add Identity
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {

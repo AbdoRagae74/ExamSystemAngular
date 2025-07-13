@@ -20,6 +20,12 @@ namespace ExaminationSystemDB.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Student>()
+                .HasOne(s => s.ApplicationUser)
+                .WithOne(u => u.Student)
+                .HasForeignKey<Student>(s => s.ApplicationUserId);
+
             modelBuilder.Entity<StudentExam>()
                 .Property(e => e.StartTime)
                 .HasDefaultValueSql("GETDATE()");
@@ -30,11 +36,11 @@ namespace ExaminationSystemDB.Models
            );
 
             // Seed Students
-            modelBuilder.Entity<Student>().HasData(
-                new Student { ID = 1, Name = "AbdelRahman", Address = "Benha", Email = "abdelrahman@example.com", HashedPassword = "hashed123" },
-                new Student { ID = 2, Name = "Sara Ahmed", Address = "Cairo", Email = "sara@example.com", HashedPassword = "sara123" },
-                new Student { ID = 3, Name = "Omar Tarek", Address = "Alexandria", Email = "omar@example.com", HashedPassword = "omar123" }
-            );
+            //modelBuilder.Entity<Student>().HasData(
+            //    new Student { ID = 1, Name = "AbdelRahman", Address = "Benha", Email = "abdelrahman@example.com", HashedPassword = "hashed123" },
+            //    new Student { ID = 2, Name = "Sara Ahmed", Address = "Cairo", Email = "sara@example.com", HashedPassword = "sara123" },
+            //    new Student { ID = 3, Name = "Omar Tarek", Address = "Alexandria", Email = "omar@example.com", HashedPassword = "omar123" }
+            //);
 
             // Seed Exams
             modelBuilder.Entity<Exam>().HasData(

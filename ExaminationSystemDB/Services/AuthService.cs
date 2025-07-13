@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using ExamSystemApi.Models;
 using ExamSystemApi.DTOs;
+using ExaminationSystemDB.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExamSystemApi.Services
 {
@@ -17,16 +19,19 @@ namespace ExamSystemApi.Services
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IJwtService _jwtService;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ExamContext _context;
 
         public AuthService(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IJwtService jwtService,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole> roleManager,
+            ExamContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _jwtService = jwtService;
             _roleManager = roleManager;
+            _context = context;
         }
 
         public async Task<AuthResponseDto> RegisterAsync(RegisterDto model)
@@ -37,6 +42,7 @@ namespace ExamSystemApi.Services
                 throw new InvalidOperationException("User already exists");
             }
 
+            // Create ApplicationUser
             var user = new ApplicationUser
             {
                 UserName = model.Email,
@@ -52,10 +58,23 @@ namespace ExamSystemApi.Services
                 throw new InvalidOperationException(string.Join(", ", result.Errors.Select(e => e.Description)));
             }
 
-            // Add role to user
-            await _userManager.AddToRoleAsync(user, model.Role);
+            // Add Student role
+            await _userManager.AddToRoleAsync(user, "Student");
 
-            var token = _jwtService.GenerateToken(user, model.Role);
+            // Create Student record
+            var student = new Student
+            {
+                Name = $"{model.FirstName} {model.LastName}",
+                Email = model.Email,
+                Address = model.Address,
+                HashedPassword = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                ApplicationUserId = user.Id
+            };
+
+            _context.Student.Add(student);
+            await _context.SaveChangesAsync();
+
+            var token = _jwtService.GenerateToken(user, "Student", student.ID);
 
             return new AuthResponseDto
             {
@@ -63,7 +82,8 @@ namespace ExamSystemApi.Services
                 Email = user.Email,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
-                Role = model.Role,
+                Role = "Student",
+                StudentId = student.ID,
                 ExpiresAt = DateTime.UtcNow.AddHours(24)
             };
         }
@@ -85,7 +105,14 @@ namespace ExamSystemApi.Services
             var roles = await _userManager.GetRolesAsync(user);
             var role = roles.FirstOrDefault() ?? "Student";
 
-            var token = _jwtService.GenerateToken(user, role);
+            int? studentId = null;
+            if (role == "Student")
+            {
+                var student = await _context.Student.FirstOrDefaultAsync(s => s.ApplicationUserId == user.Id);
+                studentId = student?.ID;
+            }
+
+            var token = _jwtService.GenerateToken(user, role, studentId);
 
             return new AuthResponseDto
             {
@@ -94,6 +121,7 @@ namespace ExamSystemApi.Services
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Role = role,
+                StudentId = studentId,
                 ExpiresAt = DateTime.UtcNow.AddHours(24)
             };
         }

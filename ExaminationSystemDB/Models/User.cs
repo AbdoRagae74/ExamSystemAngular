@@ -8,6 +8,7 @@ namespace ExamSystemApi.Models
         public string LastName { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public bool IsActive { get; set; } = true;
+        public virtual ExaminationSystemDB.Models.Student Student { get; set; }
     }
 
     public enum UserRole

@@ -18,8 +18,7 @@ namespace ExamSystemApi.DTOs
         [Required]
         public string LastName { get; set; } = string.Empty;
 
-        [Required]
-        public string Role { get; set; } = "Student"; // Default to Student
+        public string Address { get; set; } = string.Empty;
     }
 
     public class LoginDto
@@ -39,6 +38,7 @@ namespace ExamSystemApi.DTOs
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public string Role { get; set; } = string.Empty;
+        public int? StudentId { get; set; } 
         public DateTime ExpiresAt { get; set; }
     }
 }
