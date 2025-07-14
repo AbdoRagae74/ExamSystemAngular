@@ -25,7 +25,7 @@ namespace ExaminationSystemDB.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult GETExams()
         {
             List<Exam> exams = unitOfWork.ExamRepo.GetExamsInfo();
@@ -33,7 +33,7 @@ namespace ExaminationSystemDB.Controllers
             return Ok(examDTOs);
         }
         [HttpGet("{id}")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public ActionResult GetExamByID(int id) {
 
             ExamWithQuestionsDTO examDTO = mapper.Map<ExamWithQuestionsDTO>(unitOfWork.ExamRepo.getExamByID(id));

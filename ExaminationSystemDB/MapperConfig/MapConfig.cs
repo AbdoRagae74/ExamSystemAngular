@@ -44,6 +44,8 @@ namespace ExaminationSystemDB.MapperConfig
             CreateMap<StudentExam, DisplayStudentExamDTO>().AfterMap((src, dest) =>
             {
                 dest.ExamName = src.exam.Name;
+                dest.ExamGrade = src.exam.Grade;
+                dest.MinGrade = src.exam.MinGrade;
             }).ReverseMap();
             CreateMap<Answer, AdminAnswerDTO>().ReverseMap();
             CreateMap<Answer, AnswerDTO>().AfterMap((src, des) => {

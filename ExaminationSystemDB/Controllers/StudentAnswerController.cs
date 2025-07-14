@@ -11,7 +11,7 @@ namespace ExaminationSystemDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Student")]
+    [Authorize]
     public class StudentAnswerController : ControllerBase
     {
         IMapper mapper;
@@ -22,6 +22,7 @@ namespace ExaminationSystemDB.Controllers
             this.mapper = mapper;
             this.unitOfWork = unitOfWork;
         }
+
 
         [HttpPost("{studentId}")]
         [StudentOwnership]

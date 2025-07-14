@@ -11,7 +11,7 @@ namespace ExaminationSystemDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Student")]
+    [Authorize]
     public class StudentExamController : ControllerBase
     {
         IMapper mapper;
@@ -21,6 +21,12 @@ namespace ExaminationSystemDB.Controllers
         {
             this.mapper = mapper;
             this.unitOfWork = unitOfWork;
+        }
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<DisplayStudentExamDTO> stExamDTO = mapper.Map<List<DisplayStudentExamDTO>>(unitOfWork.StudentExamRepo.getWithExam());
+            return Ok(stExamDTO);
         }
 
         [HttpPost("{studentId}")]

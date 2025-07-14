@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ExaminationSystemDB.DTOs.AdminDTOs;
+using ExaminationSystemDB.DTOs.ExamDTOs;
 using ExaminationSystemDB.DTOs.StudentDTOs;
 using ExaminationSystemDB.UnitOfWorks;
 using Microsoft.AspNetCore.Authorization;
@@ -86,7 +87,7 @@ namespace ExaminationSystemDB.Controllers
         public IActionResult GetAllExams()
         {
             var exams = unit.ExamRepo.getAll();
-            var examDTOs = map.Map<List<DisplayExamSummaryDTO>>(exams);
+            var examDTOs = map.Map<List<DisplayExamDTO>>(exams);
             return Ok(examDTOs);
         }
 

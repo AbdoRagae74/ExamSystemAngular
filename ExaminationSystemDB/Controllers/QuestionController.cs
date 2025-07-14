@@ -48,6 +48,7 @@ namespace ExaminationSystemDB.Controllers
             editedEx.Grade += NewQuestion.Grade;
             editedEx.MinGrade = (int) Math.Ceiling(editedEx.Grade / 2.0); 
             Question q = mapper.Map<Question>(NewQuestion);
+            unit.ExamRepo.Update(editedEx);
             unit.QuestionRepo.Add(q);
             unit.Save();
             return Ok(NewQuestion);
@@ -58,7 +59,15 @@ namespace ExaminationSystemDB.Controllers
         public ActionResult EditQuestion(int id, EditQuestionDTO QuestionDTO)
         {
             Question EditedQuestion = unit.QuestionRepo.GetQuestionByID(id);
+            int oldGrade = EditedQuestion.Grade;
             mapper.Map(QuestionDTO, EditedQuestion);
+            Exam editedEx = unit.ExamRepo.getByID(EditedQuestion.ExamId);
+            editedEx.Grade += QuestionDTO.Grade;
+            editedEx.Grade -= oldGrade;
+            editedEx.MinGrade = (int)Math.Ceiling(editedEx.Grade / 2.0);
+            unit.QuestionRepo.Update(EditedQuestion);
+            unit.ExamRepo.Update(editedEx);
+            
             unit.Save();
             return Ok(QuestionDTO);
         }

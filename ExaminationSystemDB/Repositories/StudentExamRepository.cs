@@ -32,5 +32,10 @@ namespace ExaminationSystemDB.Repositories
                 .OrderByDescending(se => se.StudentGrade)
                 .ToList();
         }
+        public List<StudentExam> getWithExam()
+        {
+            return con.StudentExam.Include(s => s.exam).ToList();
+        }
     }
+    
 }

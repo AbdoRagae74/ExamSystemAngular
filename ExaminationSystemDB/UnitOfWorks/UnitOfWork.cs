@@ -63,7 +63,7 @@ namespace ExaminationSystemDB.UnitOfWorks
                 return studentAnswerRepo;
             }
         }
-        public StudentExamRepository StudentExamRepo
+        public StudentExamRepository  StudentExamRepo
         {
             get
             {

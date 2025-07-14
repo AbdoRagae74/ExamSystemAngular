@@ -13,7 +13,7 @@ namespace ExaminationSystemDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Student")]
+    [Authorize]
     public class StudentController : ControllerBase
     {
         UnitOfWork unit;

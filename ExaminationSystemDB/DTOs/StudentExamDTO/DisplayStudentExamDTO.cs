@@ -9,6 +9,8 @@ namespace ExaminationSystemDB.DTOs.StudentExamDTO
         public int ExamID { get; set; }
         public string ExamName { get; set; }
         public int StudentGrade { get; set; }
+        public int ExamGrade { get; set; }
+        public int MinGrade { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
     }
